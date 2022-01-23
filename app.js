@@ -1,15 +1,15 @@
 var dropdown = document.getElementById('dropdown');
-var seasons = ['Spring', 'Summer', 'Automn', 'Winter'];
-var seasonActivities = ['spring', 'summer', 'automn', 'winter'];
-var seasonIds = ['#spring', '#summer', '#automn', '#winter'];
+var seasons = ['Spring', 'Summer', 'autumn', 'Winter'];
+var seasonActivities = ['spring', 'summer', 'autumn', 'winter'];
+var seasonIds = ['#spring', '#summer', '#autumn', '#winter'];
 // const spring = "seasons/spring.html";
 // const summer = "seasons/summer.html";
-// const automn = "seasons/automn.html";
+// const autumn = "seasons/autumn.html";
 // const winter = "seasons/winter.html";
 // const seasonUrl = [];
 // seasonUrl.push(spring);
 // seasonUrl.push(summer);
-// seasonUrl.push(automn);
+// seasonUrl.push(autumn);
 // seasonUrl.push(winter);
 
 for(var i=0; i < seasons.length; i++){
