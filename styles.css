@@ -1,0 +1,26 @@
+
+/*when we use fixed-top class to make the navbar stay at the top when we scroll down the page
+the navbar will cut off some parts of the next section. this class is to solve the issue*/
+/*::before selector inserts something before the content of each selected element(s).
+we have to use the content property to specify the content to insert. we can set it to empty.
+Use the ::after selector to insert something after the content.
+this basically create a ghost element of height 60px that push down the section
+we don't need to do anything in index.html*/
+body::before{
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+/* at minium width 768px and above, we want the width to be 50% of the screen */
+@media(min-width: 768px) {
+    .news-input{
+        width:50%;
+    }
+}
+
+/* create some paddings around carousel items, to make some space between left and right arrows */
+.carousel-item{
+    padding: 7% 15%;
+}
+
