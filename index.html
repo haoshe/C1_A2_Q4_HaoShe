@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- for seo purpose, add description and keywords inside meta element -->
+    <meta name="description" content="a company which publishes gardening related ebooks. Teaching knowledge about gardening and different flowers and plants" />
+    <meta name="keywords" content="gardening, garden, flower, flowers, plant, plants, ebooks"/>
+    <title>Four Seasons Gardening Co.</title>
     <!--add Bootstrap5 to the project-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -137,7 +139,7 @@
           <img
             class="img-fluid w-50 d-none d-sm-block"
             src="images/gardening1.png"
-            alt=""
+            alt="water the plants"
           />
         </div>
       </div>
@@ -232,12 +234,20 @@
         </div>
       </div>
     </section>
-
+    
+    <!-- My plan about these activities below is to not show them at all the first time the webpage is open.
+    then, when I click Spring in Season Activities, the spring activites carousel will be shown; 
+    when I click Summer in Season Activities, the summer activities carousel will be shown, etc. 
+    Basically, only one carousel will be shown on the webpage -->
+  
     <!-- seasonal activities -->
     <!-- carousel copied from bootstrap, made some modifications -->
     <!-- spring activies -->
-    <section  style="background-color: #a2d2ff">
-      <div id="spring" class="carousel slide" data-bs-ride="carousel">
+    <section class="" style="background-color: #a2d2ff">
+      <!-- id: spring here is for the season activities drop-down link href. each link's href has a corresponding id here -->
+      <!-- SpringActivity class is for the show function's parameter -->
+      <!-- d-none: don't show the carousel -->
+      <div id="spring" class="carousel slide d-none SpringActivity" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -247,46 +257,64 @@
         <div class="carousel-inner">
           <!-- 1st carousel item -->
           <div class="carousel-item active">
+            <!-- create a container, set it in flex display, make it at the center of x and y axis -->
+            <div class="d-flex justify-content-center align-items-center">
+              <!-- give the text a bootstrap display font 4 -->
+              <h1 class="display-4">Spring Gardening Activities</h1>
+            </div>
             <!-- insert a row, wrap leftover space around each col, align each col at the center along y-axix, give a margin top and bottom bootstrap value of 5 -->
             <div class="row justify-content-around align-items-center my-5">
               <!-- insert a col, it takes full width until medium screen, then take half of the screen -->
               <div class="col col-md-6">
-                <!-- give h1 element a bootstrap display font value of 5 -->
-                <h1 class="display-5">Spring Activity One</h1>
-                <!-- make p element slightly larger, alos give it margin top and bottom bootstrap value of 4 -->
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <!-- insert a h3 element -->
+                <h3>Do a thorough spring cleanup</h3>
+                <!-- make p element slightly larger, also give it margin top and bottom bootstrap value of 4 -->
+                <p class="lead my-4">Ideally just before your spring bulbs start to pop up, clean the plant debris out of your garden beds. 
+                  This includes fallen branches, matted down leaves, last year’s perennial foliage, ornamental grasses and perennial hibiscus,
+                   and any annuals you didn’t remove last fall. Maintaining good hygiene in your garden beds will help to keep pests and diseases at bay.
+                  </p>
               </div>
               <!-- insert a col, full width until md, then take half of screen width. don't show below md, show as block at md and above -->
               <div class="col col-md-6 d-none d-md-block">
                 <!-- display as block, and resize with div container size -->
-                <img src="images/spring/spring1.jpg" class="d-block img-fluid" alt="...">
+                <!-- for seo purpose, add img description when the image fails to load -->
+                <img src="images/spring/spring1.jpg" class="d-block img-fluid" alt="flowers under the blue sky">
               </div>
             </div>
           </div>
           <!-- 2nd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Spring Gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6">
-                <h1 class="display-5">Spring Activity Two</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Test your garden soil</h3>
+                <p class="lead my-4">Experts recommend testing your garden soil every 3-5 years to see what nutrients or organic materials 
+                  it needs and which it has too much of. You might learn, for example, that your soil is very high in phosphorous, 
+                  so you would avoid adding fertilizers that contain a lot of it. Or you might find out your soil is naturally alkaline, 
+                  and need to add aluminum sulfate around your evergreens and acid-loving shrubs like hydrangeas.</p>
               </div>
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/spring/spring2.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/spring/spring2.jpg" class="d-block img-fluid" alt="lots of cherry bossom flowers on the cherry bossom tree">
               </div>
             </div>
           </div>
           <!-- 3rd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Spring Gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6">
-                <h1 class="display-5">Spring Activity Three</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Feed your soil</h3>
+                <p class="lead my-4">Once you know what your garden soil needs based on your test results, talk with someone at your local garden center 
+                  about which specific products to use, always following package instructions for best results. A good general practice is to topdress 
+                  the soil with an inch or two of compost, humus and/or manure in early spring just before or as your bulbs are starting to emerge. 
+                  </p>
               </div>
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/spring/spring3.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/spring/spring3.jpg" class="d-block img-fluid" alt="butterfly on a flower">
               </div>
             </div>
           </div>
@@ -306,7 +334,7 @@
 
     <!-- Summer activities -->
     <section style="background-color: #a3e4db;">
-      <div id="summer" class="carousel slide" data-bs-ride="carousel">
+      <div id="summer" class="carousel slide SummerActivity d-none" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -316,46 +344,60 @@
         <div class="carousel-inner">
           <!-- 1st carousel item -->
           <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Summer Gardening Activities</h1>
+            </div>
             <!-- insert a row, wrap leftover space around each col, align each col at the center along y-axix, give a margin top and bottom bootstrap value of 5 -->
             <div class="row justify-content-around align-items-center my-5">
               <!-- insert a col, full width until md, then take half of screen width. don't show below md, show as block at md and above -->
               <div class="col col-md-6 d-none d-md-block">
                 <!-- display as block, and resize with div container size -->
-                <img src="images/summer/summer1.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/summer/summer1.jpg" class="d-block img-fluid" alt="a girl with a straw hat facing the sea">
               </div>
               <!-- insert a col, it takes full width until medium screen, then take half of the screen -->
               <div class="col col-md-6">
-                <!-- give h1 element a bootstrap display font value of 5 -->
-                <h1 class="display-5">Summer Activity One</h1>
+                <!-- insert a h3 element -->
+                <h3>Prune Away</h3>
                 <!-- make p element slightly larger, alos give it margin top and bottom bootstrap value of 4 -->
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <p class="lead my-4">Keep an eye on your garden and remove any diseased, damaged, or dead debris as they block airflow and growth.
+                  If you notice a plant with dead blooms, cut them back now to ensure it grows healthier next season.
+                  Light pruning all year encourages steady growth and builds a healthy plant.
+                </p>
               </div>
             </div>
           </div>
           <!-- 2nd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Summer Gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/summer/summer2.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/summer/summer2.jpg" class="d-block img-fluid" alt="sunset at sea">
               </div>
               <div class="col col-md-6">
-                <h1 class="display-5">Summer Activity Two</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis
-                   labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Combat Pests</h3>
+                <p class="lead my-4">Bugs can be abundant in the summer months, so much so that it can be overwhelming.
+                  It is important to know which types of insects you are dealing with and which products to use. For flying insects, such as yellow jackets, 
+                  Japanese beetles, and wasps, try placing traps, like the RESCUE Reusable Yellow Jacket Traparound your yard, making sure to avoid doors and high traffic areas.
+                </p>
               </div>
             </div>
           </div>
           <!-- 3rd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Summer Gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/summer/summer3.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/summer/summer3.jpg" class="d-block img-fluid" alt="sunflower field">
               </div>
               <div class="col col-md-6">
-                <h1 class="display-5">Summer Activity Three</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Add Some Shade</h3>
+                <p class="lead my-4">If an area of your yard or garden is exposed to strong sunlight for the majority of the day, find a way to create shade.
+                  You can use a stunt plant, such as a tree or cluster of bamboo to provide shade for your flowerbeds.
+                </p>
               </div>
             </div>
           </div>
@@ -375,7 +417,7 @@
 
     <!-- autumn activities -->
     <section style="background-color: #b4c6a6;">
-      <div id="autumn" class="carousel slide" data-bs-ride="carousel">
+      <div id="autumn" class="carousel slide AutumnActivity d-none" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -385,46 +427,55 @@
         <div class="carousel-inner">
           <!-- 1st carousel item -->
           <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Autumn Gardening Activities</h1>
+            </div>
             <!-- insert a row, wrap leftover space around each col, align each col at the center along y-axix, give a margin top and bottom bootstrap value of 5 -->
             <div class="row justify-content-around align-items-center my-5">
               <!-- insert a col, it takes full width until medium screen, then take half of the screen -->
               <div class="col col-md-6">
-                <!-- give h1 element a bootstrap display font value of 5 -->
-                <h1 class="display-5">autumn Activity One</h1>
+                <!-- insert a h3 element -->
+                <h3>Green up and repair your lawn</h3>
                 <!-- make p element slightly larger, alos give it margin top and bottom bootstrap value of 4 -->
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <p class="lead my-4">Applying an autumn lawn fertiliser will encourage a stronger, healthier lawn that will need less looking after. Rake out 
+                  the dead grass or ‘thatch’ first, to ensure feed gets through to the roots. Weed and reseed any patches that need it.</p>
               </div>
               <!-- insert a col, full width until md, then take half of screen width. don't show below md, show as block at md and above -->
               <div class="col col-md-6 d-none d-md-block">
                 <!-- display as block, and resize with div container size -->
-                <img src="images/autumn/autumn1.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/autumn/autumn1.jpg" class="d-block img-fluid" alt="a stone house in the mountains">
               </div>
             </div>
           </div>
           <!-- 2nd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Autumn Gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6">
-                <h1 class="display-5">autumn Activity Two</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Plant up a border or makeover an existing one</h3>
+                <p class="lead my-4">Autumn is a good time to plant or move hardy plants like trees, shrubs, roses and perennials. 
+                  Warm soil encourages speedy root growth and autumn rain should keep them well watered. Your plants will become established over winter and will romp away in spring.</p>
               </div>
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/autumn/autumn2.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/autumn/autumn2.jpg" class="d-block img-fluid" alt="sun rays in the woods">
               </div>
             </div>
           </div>
           <!-- 3rd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Autumn gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6">
-                <h1 class="display-5">autumn Activity Three</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Plant bare-root plants</h3>
+                <p class="lead my-4">Planting dormant, bare-root roses, trees, shrubs, hedges and perennial plants in autumn and 
+                  winter is not only economical – the plants will establish quickly too. </p>
               </div>
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/autumn/autumn3.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/autumn/autumn3.jpg" class="d-block img-fluid" alt="waterfall">
               </div>
             </div>
           </div>
@@ -444,7 +495,7 @@
 
     <!-- Winter activities -->
     <section style="background-color: #eeeeee;">
-      <div id="winter" class="carousel slide" data-bs-ride="carousel">
+      <div id="winter" class="carousel slide WinterActivity d-none" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -454,46 +505,57 @@
         <div class="carousel-inner">
           <!-- 1st carousel item -->
           <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Winter Gardening Activities</h1>
+            </div>
             <!-- insert a row, wrap leftover space around each col, align each col at the center along y-axix, give a margin top and bottom bootstrap value of 5 -->
             <div class="row justify-content-around align-items-center my-5">
               <!-- insert a col, full width until md, then take half of screen width. don't show below md, show as block at md and above -->
               <div class="col col-md-6 d-none d-md-block">
                 <!-- display as block, and resize with div container size -->
-                <img src="images/winter/winter1.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/winter/winter1.jpg" class="d-block img-fluid" alt="red berries covered by frost">
               </div>
               <!-- insert a col, it takes full width until medium screen, then take half of the screen -->
               <div class="col col-md-6">
-                <!-- give h1 element a bootstrap display font value of 5 -->
-                <h1 class="display-5">Winter Activity One</h1>
+                <!-- insert a h3 element -->
+                <h3>Winterize the garden</h3>
                 <!-- make p element slightly larger, alos give it margin top and bottom bootstrap value of 4 -->
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <p class="lead my-4">To protect plants from cold winter temperatures, water the garden thoroughly before the first hard frost. 
+                  Once the ground has begun to freeze, mulch around the base of more tender plants with several inches of shredded leaves, ground bark or evergreen boughs.
+                   Newly planted trees or shrubs can be wrapped with a layer of burlap stuffed with insulating material such as straw or dried leaves.</p>
               </div>
             </div>
           </div>
           <!-- 2nd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Winter Gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/winter/winter2.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/winter/winter2.jpg" class="d-block img-fluid" alt="snowing mountains">
               </div>
               <div class="col col-md-6">
-                <h1 class="display-5">Winter Activity Two</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis
-                   labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Grow food</h3>
+                <p class="lead my-4">Just because it's winter doesn't mean you can't have fresh food from the garden. Greens such as lettuce,
+                   arugula and mustard, along with cold-weather crops including kale and Swiss chard can be grown in a cloche or cold frame. 
+                   Many root crops and brassicas will overwinter for a spring harvest.</p>
               </div>
             </div>
           </div>
           <!-- 3rd carousel item -->
           <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="display-4">Winter Gardening Activities</h1>
+            </div>
             <div class="row justify-content-around align-items-center my-5">
               <div class="col col-md-6 d-none d-md-block">
-                <img src="images/winter/winter3.jpg" class="d-block img-fluid" alt="...">
+                <img src="images/winter/winter3.jpg" class="d-block img-fluid" alt="a calm lake surrounded by snow-top mountains">
               </div>
               <div class="col col-md-6">
-                <h1 class="display-5">Winter Activity Three</h1>
-                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quos placeat iusto inventore reiciendis cum quaerat omnis 
-                  labore modi neque ipsam voluptate maxime dolore molestias quia, ad sapiente? Numquam, similique!</p>
+                <h3>Think nature</h3>
+                <p class="lead my-4">Make sure your feathered friends have a steady source of food and water so they'll stay year-round to 
+                  help with pest control and balancing your garden's ecosystem. Place nesting houses by February if you want to increase your bird population.</p>
               </div>
             </div>
           </div>
@@ -509,7 +571,7 @@
         </button>
       </div>
     </section>
-
+ 
 
      <!-- Contact & Map -->
 
