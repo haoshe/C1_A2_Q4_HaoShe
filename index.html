@@ -1,7 +1,11 @@
+<!-- html 5 declaration -->
 <!DOCTYPE html>
+<!-- The lang attribute specifies which language is used to write the content of a web page. -->
 <html lang="en">
   <head>
+    <!-- specifies the character encoding for the HTML document. -->
     <meta charset="UTF-8" />
+    <!-- The X-UA-Compatible meta tag allows web authors to choose what version of Internet Explorer the page should be rendered as. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- for seo purpose, add description and keywords inside meta element -->
     <meta name="description" content="a company which publishes gardening related ebooks. Teaching knowledge about gardening and different flowers and plants" />
@@ -169,6 +173,7 @@
     </section>
 
      <!-- pricing plans -->
+     <!-- using bootstrap cards -->
      <section id="pricing" class="bg-light mt-5">
       <div class="container-lg">
         <div class="text-center">
@@ -178,12 +183,14 @@
 
         <!-- g-0: strip out the gap between cards -->
         <div class="row my-5 justify-content-center align-items-center g-0">
+          <!-- large screen takes 4 cols, xl takes 3 cols, smaller than lg takes 8 cols -->
           <div class="col-8 col-lg-4 col-xl-3">
             <div class="card border-0">
               <div class="card-body text-center py-4">
                 <h4 class="card-title">Starter</h4>
                 <p class="lead card-subtitle">eBook download only</p>
                 <p class="display-5 my-4 fw-bold text-primary">€9.99</p>
+                <!-- don't show when the screen is smaller than lg, show block when the screen is lg and above -->
                 <p class="card-text mx-5 text-muted d-none d-lg-block">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Aperiam, magnam!
@@ -283,6 +290,7 @@
             </div>
           </div>
           <!-- 2nd carousel item -->
+          <!-- bootstrap classes below are the same as 1st item, so refer to comments in 1st item -->
           <div class="carousel-item">
             <div class="d-flex justify-content-center align-items-center">
               <h1 class="display-4">Spring Gardening Activities</h1>
@@ -301,6 +309,7 @@
             </div>
           </div>
           <!-- 3rd carousel item -->
+          <!-- refer to 1st item for classes comments-->
           <div class="carousel-item">
             <div class="d-flex justify-content-center align-items-center">
               <h1 class="display-4">Spring Gardening Activities</h1>
@@ -333,6 +342,7 @@
 
 
     <!-- Summer activities -->
+    <!-- any classes with aria are for visual challenged people -->
     <section style="background-color: #a3e4db;">
       <div id="summer" class="carousel slide SummerActivity d-none" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -624,10 +634,6 @@
           <!-- 2nd collumn -->
           <div class="col-md">
               <!-- insert a map inside the collumn, google how to do it -->
-            <!-- <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" 
-                marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=University of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                <a href="https://www.fridaynightfunkin.net/friday-night-funkin-mods-fnf-play-online/">FNF Online Games</a></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}
-                .gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style></div> -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.536925267022!2d-6.162961747926747!3d53.40522307989322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48671aacc851cf87%3A0x7e8ff8df609be2f2!2sFather%20Collins%20Park!5e0!3m2!1sen!2sie!4v1642705563633!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
